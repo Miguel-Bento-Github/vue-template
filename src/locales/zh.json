@@ -1,4 +1,7 @@
 {
   "hello": "你好 i18n!",
-  "greeting": "欢迎来到我的翻译应用"
+  "greeting": "欢迎来到我的翻译应用",
+  "language": {
+    "selectLanguage": "语言"
+  }
 }

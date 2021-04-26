@@ -1,28 +1,53 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld :msg="$t('hello')"/>
+    <LanguageSelector />
+    <HelloWorld :msg="$t('hello')" />
+    <img class="logo" alt="Vue logo" src="./assets/world.svg" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import LanguageSelector from "./components/LanguageSelector";
+import i18n from "./plugin/i18n";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    LanguageSelector,
+  },
+  beforeCreate() {
+    if (localStorage.locale) {
+      i18n.locale = localStorage.locale;
+    }
+  },
+};
 </script>
 
 <style>
+@import url("./style/reset.css");
+@import url("./style/default.css");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Titillium Web, Helvetica, Arial, sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: var(--dark);
+  color: var(--light);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.logo {
+  margin-top: 3rem;
+  padding: 3rem;
 }
 </style>
