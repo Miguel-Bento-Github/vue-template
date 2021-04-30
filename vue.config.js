@@ -9,12 +9,8 @@ module.exports = {
   },
   css: {
     loaderOptions: {
-      sass: {
-        prependData: `
-          @import '~sanitize.css';
-          @import '~sanitize.css/typography.css';
-          @import "@/style/defaults.css";
-        `,
+      scss: {
+        additionalData: `@import "@/style/_index.scss";`,
       },
     },
   },

@@ -25,7 +25,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "~sanitize.css";
+@import "~sanitize.css/typography.css";
+
+$defaultSpace: 3rem;
+
 #app {
   font-family: Titillium Web, Helvetica, Arial, sans-serif;
   font-size: var(--font-size);
@@ -35,16 +40,15 @@ export default {
   text-align: center;
   background-color: var(--dark);
   color: var(--light);
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: $defaultSpace;
+  padding-bottom: $defaultSpace;
 }
 
 .logo {
-  margin-top: 3rem;
-  padding: 3rem;
+  margin-top: $defaultSpace;
+  padding: $defaultSpace;
 }
 </style>
