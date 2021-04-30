@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import i18n, { languages } from "../plugin/i18n";
 
 export default {

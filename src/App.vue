@@ -6,9 +6,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
-import LanguageSelector from "./components/LanguageSelector";
+import LanguageSelector from "./components/LanguageSelector.vue";
 import i18n from "./plugin/i18n";
 
 export default {
@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style>
-@import url("./style/reset.css");
-@import url("./style/default.css");
-
 #app {
   font-family: Titillium Web, Helvetica, Arial, sans-serif;
   font-size: var(--font-size);
