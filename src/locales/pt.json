@@ -1,7 +1,9 @@
 {
-  "hello": "Olá i18n!",
+  "hello": "Olá",
   "greeting": "Bem-vindo à minha app de localizações",
   "language": {
     "selectLanguage": "Línguas"
-  }
+  },
+  "home": "casa",
+  "about": "sobre"
 }

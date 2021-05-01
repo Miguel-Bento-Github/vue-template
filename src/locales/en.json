@@ -1,7 +1,10 @@
 {
-  "hello": "Hello i18n!",
+  "hello": "Hello",
   "greeting": "Welcome to my localizations app",
   "language": {
     "selectLanguage": "Languages"
-  }
+  },
+  "home": "home",
+  "about": "about",
+  "helloWorld": "@:hello world"
 }
