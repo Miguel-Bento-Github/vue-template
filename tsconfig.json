@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "es2016",
-    "lib": ["DOM", "ESNext"],
     "strict": true,
     "esModuleInterop": true,
     "incremental": true,
@@ -18,7 +17,9 @@
     "types": ["vite/client", "vite-plugin-vue-layouts/client", "node", "webpack-env"],
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
+  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.ts", "tests/**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }

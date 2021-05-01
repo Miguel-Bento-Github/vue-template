@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <LanguageSelector />
-    <nav class="nav">
-      <router-link class="link" to="/">{{ $t("home") }}</router-link> |
-      <router-link class="link" to="/about">{{ $t("about") }}</router-link>
-    </nav>
+    <header class="header">
+      <LanguageSelector />
+      <nav class="nav">
+        <router-link class="link" to="/">{{ $t("home") }}</router-link> |
+        <router-link class="link" to="/about">{{ $t("about") }}</router-link>
+      </nav>
+    </header>
     <transition name="fade">
       <router-view class="view" />
     </transition>
@@ -34,8 +36,16 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .nav {
-  padding: 3rem;
+  margin-right: auto;
 }
 
 .link {
@@ -59,6 +69,7 @@ export default {
 .view {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .fade-enter-active {

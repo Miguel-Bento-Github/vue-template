@@ -4,7 +4,13 @@
   "language": {
     "selectLanguage": "Languages"
   },
-  "home": "home",
-  "about": "about",
-  "helloWorld": "@:hello world"
+  "home": "Home",
+  "about": "About",
+  "helloWorld": "@:hello world",
+  "options": {
+    "options": "Options",
+    "hardware": "Hardware",
+    "observational": "Observational",
+    "behavioral": "Behavioral"
+  }
 }

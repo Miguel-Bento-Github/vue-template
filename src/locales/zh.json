@@ -4,6 +4,12 @@
   "language": {
     "selectLanguage": "语言"
   },
-  "home": "家",
-  "about": "关于"
+  "home": "主页",
+  "about": "关于",
+  "options": {
+    "options": "选项",
+    "hardware": "硬件",
+    "observational": "观察性的",
+    "behavioral": "行为的"
+  }
 }

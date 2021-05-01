@@ -36,6 +36,9 @@ export default {
     };
   },
   watch: {
+    /**
+     * Updates the i18n plugin and localStorage locale.
+     */
     language(newValue) {
       if (newValue) i18n.locale = newValue;
       localStorage.locale = newValue;
@@ -53,7 +56,6 @@ export default {
   border-radius: 3rem;
   color: var(--light);
   background-color: var(--dark);
-  margin: 0 auto;
   box-shadow: 2px 2px 4px 0.4rem #1d2a36, -2px -2px 4px 0.4rem #3c546b;
   transition: box-shadow 0.2s ease-out;
 }
@@ -64,14 +66,14 @@ export default {
 }
 
 .instruction {
-  padding-right: 3.6rem;
+  padding: 0 3.6rem 0 0;
 }
 
 .language-selector {
   all: unset;
   text-align: left;
   width: 12rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .chevron {

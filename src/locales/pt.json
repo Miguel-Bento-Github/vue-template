@@ -4,6 +4,12 @@
   "language": {
     "selectLanguage": "Línguas"
   },
-  "home": "casa",
-  "about": "sobre"
+  "home": "Casa",
+  "about": "Sobre",
+  "options": {
+    "options": "Opções",
+    "hardware": "Hardware",
+    "observational": "Observacional",
+    "behavioral": "Comportamental"
+  }
 }
