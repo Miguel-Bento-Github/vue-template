@@ -4,7 +4,7 @@ import { createLocalVue, shallowMount } from "@vue/test-utils";
 const localVue = createLocalVue();
 
 describe("LanguageSelector.vue", () => {
-  it("should change the state locale to a new string", () => {
+  it("Should have languages and language defined in the state", () => {
     const wrapper = shallowMount(LanguageSelector, {
       localVue,
       mocks: {
@@ -12,6 +12,7 @@ describe("LanguageSelector.vue", () => {
       },
     });
 
-    wrapper.setData({ language: "en" });
+    expect(wrapper.vm.$data.languages).toBeTruthy();
+    expect(wrapper.vm.$data.language).toBeDefined();
   });
 });

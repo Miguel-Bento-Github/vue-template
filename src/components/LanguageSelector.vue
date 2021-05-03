@@ -9,7 +9,12 @@
       <option class="instruction" disabled value="">
         {{ $t("language.selectLanguage") }}
       </option>
-      <option :value="language" v-for="language in languages" :key="language">
+      <option
+        class="option"
+        :value="language"
+        v-for="language in languages"
+        :key="language"
+      >
         {{ possibilities[language] }}
       </option>
     </select>
@@ -25,11 +30,13 @@
 <script lang="ts">
 import i18n, { languages } from "../plugin/i18n";
 
+const possibilities = { en: "English", pt: "Português", zh: "中文" } as const;
+
 export default {
   name: "LanguageSelector",
   data() {
     return {
-      possibilities: { en: "English", pt: "Português", zh: "中文" },
+      possibilities,
       languages,
       language: i18n.locale,
       isMenuOpen: false,
@@ -65,15 +72,21 @@ export default {
   box-shadow: 2px 2px 4px 0.4rem #1a2631, -2px -2px 4px 0.4rem #456079;
 }
 
-.instruction {
-  padding: 0 3.6rem 0 0;
-}
-
 .language-selector {
   all: unset;
   text-align: left;
   width: 12rem;
   padding: 0.25rem 0.5rem;
+}
+
+.instruction,
+.option {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.instruction {
+  padding: 0 3.6rem 0 0;
 }
 
 .chevron {

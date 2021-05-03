@@ -8,10 +8,17 @@
 </template>
 
 <script lang="ts">
+interface Message {
+  msg: string;
+}
+
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    msg: {
+      type: Object as () => Message,
+      required: true,
+    },
   },
 };
 </script>
